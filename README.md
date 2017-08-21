@@ -1,0 +1,2 @@
+# rule_for_redirector
+自己收集或者编写的redirector规则，适用于firefox的扩展版redirector
