@@ -1,7 +1,22 @@
 {
     "createdBy": "Redirector v3.1.0",
-    "createdAt": "2017-08-21T13:17:41.494Z",
+    "createdAt": "2017-08-21T13:28:02.234Z",
     "redirects": [
+        {
+            "description": "谷歌去跳转",
+            "exampleUrl": "https://www.google.com.hk/search?q=shadowsocksr&ie=utf-8&oe=utf-8&client=firefox-b",
+            "exampleResult": "https://www.google.com/ncr#search?q=shadowsocksr&ie=utf-8&oe=utf-8&client=firefox-b",
+            "error": null,
+            "includePattern": "https://www.google*/*",
+            "excludePattern": "https://www.google.com/*",
+            "redirectUrl": "https://www.google.com/ncr#$2",
+            "patternType": "W",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
         {
             "description": "通用反跳转",
             "exampleUrl": "https://steamcommunity.com/linkfilter/?url=https://getfedora.org/",
