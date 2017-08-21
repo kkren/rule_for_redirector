@@ -1,15 +1,15 @@
 {
     "createdBy": "Redirector v3.1.0",
-    "createdAt": "2017-08-21T07:47:24.121Z",
+    "createdAt": "2017-08-21T13:17:41.494Z",
     "redirects": [
         {
-            "description": "steam反跳转",
+            "description": "通用反跳转",
             "exampleUrl": "https://steamcommunity.com/linkfilter/?url=https://getfedora.org/",
             "exampleResult": "https://getfedora.org/",
             "error": null,
-            "includePattern": "http*://steamcommunity.com/linkfilter/?url=*",
-            "excludePattern": "",
-            "redirectUrl": "$2",
+            "includePattern": "http*://*http*://*",
+            "excludePattern": "http*://*http*%3A*",
+            "redirectUrl": "http$3://$4",
             "patternType": "W",
             "processMatches": "noProcessing",
             "disabled": false,
@@ -18,28 +18,13 @@
             ]
         },
         {
-            "description": "AMO反跳转",
-            "exampleUrl": "https://outgoing.prod.mozaws.net/v1/e5512cff4747eaa037370c2eb7bd507f0118d43414d37c5992dcd6739e505f0b/http%3A//meyerweb.com/eric/thoughts/2017/03/07/welcome-to-the-grid/%3Futm_source=frontendfocus&utm_medium=email",
-            "exampleResult": "http://meyerweb.com/eric/thoughts/2017/03/07/welcome-to-the-grid/?utm_source=frontendfocus&utm_medium=email",
+            "description": "通用反跳转（转码）",
+            "exampleUrl": "http://link.zhihu.com/?target=https%3A//github.com/Deletescape-Media/Lawnchair",
+            "exampleResult": "https://github.com/Deletescape-Media/Lawnchair",
             "error": null,
-            "includePattern": "http*://outgoing.prod.mozaws.net*http*",
-            "excludePattern": "",
+            "includePattern": "http*://*http*",
+            "excludePattern": "http*://*http*://",
             "redirectUrl": "http$3",
-            "patternType": "W",
-            "processMatches": "urlDecode",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "豆瓣反跳转",
-            "exampleUrl": "https://www.douban.com/link2/?url=http%3A%2F%2Fwww.douban.com%2Fgroup%2FSMaf%2F&query=%E8%BD%AF%E4%BB%B6&cat_id=1019&type=search&pos=2",
-            "exampleResult": "http://www.douban.com/group/SMaf/",
-            "error": null,
-            "includePattern": "http*://www.douban.com/link2/?url=*&*",
-            "excludePattern": "",
-            "redirectUrl": "$2",
             "patternType": "W",
             "processMatches": "urlDecode",
             "disabled": false,
@@ -57,36 +42,6 @@
             "redirectUrl": "$1",
             "patternType": "W",
             "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "云梦博客反跳转",
-            "exampleUrl": "https://www.htcp.net/go/?url=https://pan.baidu.com/s/1jIabLg6",
-            "exampleResult": "https://pan.baidu.com/s/1jIabLg6",
-            "error": null,
-            "includePattern": "https://www.htcp.net/go/?url=*",
-            "excludePattern": "",
-            "redirectUrl": "$1",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "知乎反跳转（http）",
-            "exampleUrl": "http://link.zhihu.com/?target=https%3A//github.com/Deletescape-Media/Lawnchair",
-            "exampleResult": "https://github.com/Deletescape-Media/Lawnchair",
-            "error": null,
-            "includePattern": "http*://link.zhihu.com/?target=*",
-            "excludePattern": "",
-            "redirectUrl": "$2",
-            "patternType": "W",
-            "processMatches": "urlDecode",
             "disabled": false,
             "appliesTo": [
                 "main_frame"
