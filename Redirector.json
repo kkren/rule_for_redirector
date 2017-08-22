@@ -1,7 +1,22 @@
 {
     "createdBy": "Redirector v3.1.0",
-    "createdAt": "2017-08-21T13:28:02.234Z",
+    "createdAt": "2017-08-22T08:10:31.014Z",
     "redirects": [
+        {
+            "description": "大部分登陆修复",
+            "exampleUrl": "https://login.taobao.com/member/login.jhtml?f=top&redirectURL=http%3A%2F%2Fwww.taobao.com%2F",
+            "exampleResult": "https://login.taobao.com/member/login.jhtml?f=top&redirectURL=http://www.taobao.com/",
+            "error": null,
+            "includePattern": "http*://*login*",
+            "excludePattern": "",
+            "redirectUrl": "http$1://$2login$3",
+            "patternType": "W",
+            "processMatches": "urlDecode",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
         {
             "description": "谷歌去跳转",
             "exampleUrl": "https://www.google.com.hk/search?q=shadowsocksr&ie=utf-8&oe=utf-8&client=firefox-b",
@@ -23,7 +38,7 @@
             "exampleResult": "https://getfedora.org/",
             "error": null,
             "includePattern": "http*://*http*://*",
-            "excludePattern": "http*://*http*%3A*",
+            "excludePattern": "http*://*http*%3A*,*taobao.com*",
             "redirectUrl": "http$3://$4",
             "patternType": "W",
             "processMatches": "noProcessing",
@@ -38,7 +53,7 @@
             "exampleResult": "https://github.com/Deletescape-Media/Lawnchair",
             "error": null,
             "includePattern": "http*://*http*",
-            "excludePattern": "http*://*http*://",
+            "excludePattern": "http*://*http*://,*taobao.com*",
             "redirectUrl": "http$3",
             "patternType": "W",
             "processMatches": "urlDecode",
