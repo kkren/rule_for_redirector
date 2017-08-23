@@ -1,13 +1,13 @@
 {
     "createdBy": "Redirector v3.1.0",
-    "createdAt": "2017-08-23T08:26:16.629Z",
+    "createdAt": "2017-08-23T08:52:02.470Z",
     "redirects": [
         {
             "description": "大部分登陆修复",
-            "exampleUrl": "https://oauth.accounts.firefox.oauth/v1/authorization?action=signin&scope=profile&state=42d2ab416973f8f05cc60d2c65618d780107119e1607f4e397a25e755f8ea6fa%3AL3poLUNOL2ZpcmVmb3gv&redirect_url=https%3A%2F%2Faddons.mozilla.org%2Fapi%2Fv3%2Faccounts%2Fauthenticate%2F&client_id=a4907de5fa9d78fc",
-            "exampleResult": "https://oauth.accounts.firefox.oauth/v1/authorization?action=signin&scope=profile&state=42d2ab416973f8f05cc60d2c65618d780107119e1607f4e397a25e755f8ea6fa:L3poLUNOL2ZpcmVmb3gv&redirect_url=https://addons.mozilla.org/api/v3/accounts/authenticate/&client_id=a4907de5fa9d78fc",
+            "exampleUrl": "https://passport.weibo.com/visitor/visitor?entry=miniblog&a=enter&url=http%3A%2F%2Fweibo.com%2Fttarticle%2Fp%2Fshow%3Fid%3D2309404143672705820833&domain=.weibo.com&ua=php-sso_sdk_client-0.6.23&_rand=1503478130.2531",
+            "exampleResult": "https://passport.weibo.com/visitor/visitor?entry=miniblog&a=enter&url=http://weibo.com/ttarticle/p/show?id=2309404143672705820833&domain=.weibo.com&ua=php-sso_sdk_client-0.6.23&_rand=1503478130.2531",
             "error": null,
-            "includePattern": "^(http|https):\\/\\/((login|oauth|account).+)",
+            "includePattern": "^(http|https):\\/\\/((login|oauth|account|passport).+)",
             "excludePattern": "",
             "redirectUrl": "$1://$2",
             "patternType": "R",
@@ -68,7 +68,7 @@
             "exampleResult": "https://github.com/Deletescape-Media/Lawnchair",
             "error": null,
             "includePattern": "http*://*http*",
-            "excludePattern": "http*://*http*://,*taobao.com*",
+            "excludePattern": "http*://*http*://",
             "redirectUrl": "http$3",
             "patternType": "W",
             "processMatches": "urlDecode",
