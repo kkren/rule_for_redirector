@@ -1,7 +1,22 @@
 {
     "createdBy": "Redirector v3.1.0",
-    "createdAt": "2017-08-22T08:10:31.014Z",
+    "createdAt": "2017-08-23T02:16:11.801Z",
     "redirects": [
+        {
+            "description": "常用网站转https",
+            "exampleUrl": "http://www.iqiyi.com/a_19rrhdmy3h.html",
+            "exampleResult": "https://www.iqiyi.com/a_19rrhdmy3h.html",
+            "error": null,
+            "includePattern": "^http:\\/\\/([^\\/]+\\.(iqiyi|baidu)\\.com\\/.+)",
+            "excludePattern": "",
+            "redirectUrl": "https://$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
         {
             "description": "大部分登陆修复",
             "exampleUrl": "https://login.taobao.com/member/login.jhtml?f=top&redirectURL=http%3A%2F%2Fwww.taobao.com%2F",
